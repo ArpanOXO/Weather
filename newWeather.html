@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weather</title>
+        <link rel="stylesheet" href="weather.css">
+    </head>
+    <body>
+        <header>
+            <img src="icons/weather.png" class="header-icon">
+            <p class="header-text">India Cities Weather</p>
+        </header>
+        <div class="cityDiv">
+            <div class="buttonContainer">
+                <button onclick="
+                    let k = 'Bengaluru';
+                    console.log(checkWeather(k));
+                    setCityName(k);
+                ">Bengaluru</button>
+            </div>
+            <div class="buttonContainer"> 
+                <button onclick="
+                    k = 'Chennai';
+                    console.log(checkWeather(k));
+                    setCityName(k);
+                ">Chennai</button>
+            </div>
+            <div class="buttonContainer">
+                <button onclick="
+                    k = 'Delhi';
+                    console.log(checkWeather(k));
+                    setCityName(k);
+                ">Delhi</button>
+            </div>
+            <div class="buttonContainer">
+                <button onclick="
+                    k = 'Hyderabad';
+                    console.log(checkWeather(k));
+                    setCityName(k);
+                ">Hyderabad</button>
+            </div>
+            <div class="buttonContainer">
+                <button onclick="
+                    k = 'Kolkata';
+                    console.log(checkWeather(k));
+                    setCityName(k);
+                ">Kolkata</button>
+            </div>
+            <div class="buttonContainer">
+                <button onclick="
+                    k = 'Mumbai';
+                    console.log(checkWeather(k));
+                    setCityName(k);
+                ">Mumbai</button>
+            </div>
+            <div class="buttonContainer">
+                <button onclick="
+                    k = 'Pune';
+                    console.log(checkWeather(k));
+                    setCityName(k);
+                ">Pune</button>
+            </div>
+        </div>
+        <div class="cityNameContainer">
+            <p class="cityName">City Name</p>
+        </div>
+        <div class="temperatureContainer">
+            <img src="icons/sunny.png" class="weather-condition-js weathercondition">
+            <p class="temperature-js tempCss">25°C</p>
+        </div>
+        <div class="otherDiv">
+            <div class="Container">
+                <img src="icons/humidity.png" class="Icon">
+                <p class="Text">Humidity :</p>
+                <p class="humidity-js humidity">N/A</p>
+            </div>
+            <div class="Container">
+                <img src="icons/windspeed.png" class="Icon">
+                <p class="Text">Wind Speed :</p>
+                <p class="windSpeed-js windSpeed">N/A</p>
+            </div>
+            <div class="Container">
+                <img src="icons/weatherCondition.png" class="Icon">
+                <p class="Text">Weather Condition :</p>
+                <p class="weatherCon">N/A</p>
+            </div>
+        </div>
+        
+
+        <script src="weather.js"></script>
+    </body>
+</html>

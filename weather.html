@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WeatherWeb</title>
+    <style>
+      .header-icon{
+        height: 40px;
+      }
+      .header-text{
+        font-size: 55px;
+        font-weight: bold;
+        font-family: Arial;
+        display: inline;
+        align-items: center;
+      }
+      .broadcast{
+        background-color: grey;
+        color: black;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 450px;
+        width: 350px;
+        border: none;
+        border-radius: 10px;
+      }
+      .cityName{
+        font-family: Arial;
+        font-size: 40px;
+        font-weight: bold;
+      }
+      .tempAndWeather{
+        display: flex;
+      }
+      .weatherIcon{
+        height: 150px;
+        margin-right: 20px;
+      }
+      .temperature{
+        font-size: 60px;
+      }
+      .humidityCss{
+        display: flex;
+        align-items: center;
+      }
+      .humidityIcon{
+        height: 50px;
+        margin-right: 10px;
+        margin-top: 0px;
+      }
+      humidityDiv{
+        
+      }
+      .humidityText{
+        font-size: 20px;
+        font-family: Arial;
+        font-weight: bold;
+        margin-bottom: 0px;
+      }
+      .humidityPercentage{
+        font-family: Arial;
+        font-size: 30px;
+        margin-top: 0px;
+        margin-left: 15px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="icons/weather.png" class="header-icon">
+      <p class="header-text">India Cities Weather</p>
+    </header>
+    <div class="full-info">
+      <div class="broadcast">
+        <div class="cityName">
+          <p>Kolkata</p>
+        </div>
+        <div class="tempAndWeather">
+          <img src="icons/sunny.png" class="weather-icon-js weatherIcon">
+          <p class="temperature-js temperature"></p>
+        </div>
+        <div class="humidityCss">
+          <img src="icons/humidity.png" class="humidityIcon">
+          <div class="humidityDiv">
+            <p class="humidityText">Humidity:</p>
+            <p class="humidity-js humidityPercentage"></p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <script>
+      const apiId = 'a86ab9f0c9d5f10968cf33888d23d67d';
+      const apiURL = 'https://api.openweathermap.org/data/2.5/weather?q=kolkata&units=metric';
+      const weatherIcon = document.querySelector('.weather-icon-js');
+      async function checkWeather(){
+        const responce = await fetch(apiURL + `&appid=${apiId}`);
+        let data = await responce.json();
+        let k = data.weather[0].main;
+        console.log(data);
+        console.log(data.weather[0].main);
+        
+
+        document.querySelector('.humidity-js').innerHTML =  data.main.humidity + '%';
+        document.querySelector('.temperature-js').innerHTML =  Math.round(data.main.temp) + '°C';
+
+        if(k === 'Mist'){
+          weatherIcon.src = "icons/mist.png";
+        } else if( k === "Clear"){
+          weatherIcon.src = "icons/sunny.png";
+        } else if( k === "Clouds"){
+          weatherIcon.src = "icons/clouds.png";
+        } else if( k === "Rain"){
+          weatherIcon.src = "icons/rain.png";
+        } else if( k === "Drizzle"){
+          weatherIcon.src = "icons/drizzle.png";
+        } else if( k === "Haze"){
+          weatherIcon.src = "icons/haze.png";
+        } 
+      }
+      checkWeather();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,105 @@
+body{
+    background-color: rgb(0, 174, 255);
+}
+.header-icon{
+    height: 45px;
+    margin-right: 12px;
+}
+.header-text{
+    display: inline;
+    font-size: 60px;
+    font-family: Arial;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+.cityDiv{
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+.buttonContainer{
+    flex : 1;
+    display: flex;
+    display: inline-grid;
+    
+}
+button{
+    font-size: 20px;
+    font-family: Arial;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 120px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    background-color: rgb(0, 102, 255);
+    color: azure;
+}
+.temperatureContainer{                
+    border-radius: 20px;
+    background-color: azure;
+    margin-top: 10px;
+}
+.tempCss{
+    display: inline;
+    margin-left: 30px;
+    font-size: 150px;
+}
+.weathercondition{
+    display: inline;
+    margin-right: 30px;
+    margin-left: 20px;
+    margin-top: 40px;
+    height: 300px;
+    padding-bottom: 0px;
+}
+.Container{
+    background-color: rgb(193, 236, 180);
+    height: 50px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+.Icon{
+    height: 40px;
+    margin-left: 10px;
+    margin-right: 10px
+}
+.Text{
+    font-size: 30px;
+    font-family: Arial;
+    font-weight: bold;
+    flex: 1;
+}
+.humidity{
+    margin-right: 10px;
+    font-size: 30px;
+    font-family: Arial;
+    font-weight: bold;
+}
+.windSpeed{
+    margin-right: 10px;
+    font-size: 30px;
+    font-family: Arial;
+    font-weight: bold;
+}
+.weatherCon{
+    margin-right: 10px;
+    font-size: 30px;
+    font-family: Arial;
+    font-weight: bold;
+}
+.cityNameContainer{
+    background-color: rgb(23, 212, 23);
+    color: white;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.cityName{
+    font-size: 40px;
+    font-family: Arial;
+}
